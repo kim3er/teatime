@@ -20,6 +20,7 @@ function notify(number) {
 
 dash.on('detected', function (){
 	for (var i = 0, l = numbers.length; i < l; i++) {
+		console.log('Button pressed');
 		notify(numbers[i]);
 	}
 });
