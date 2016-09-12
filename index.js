@@ -1,4 +1,4 @@
-var client = require('twilio');
+var client = require('twilio')();
 var dash_button = require('node-dash-button');
 
 var dash = dash_button('44:65:0d:66:87:c4', null, null, 'all'); //address from step above
@@ -11,7 +11,7 @@ function notify(number) {
 		to: number,
 		from: '+441484906118'
 	}, function() {
-		console.log(arguments);
+		//console.log(arguments);
 	});
 }
 
