@@ -1,12 +1,9 @@
 var client = require('twilio');
 var dash_button = require('node-dash-button');
 
-var dash = dash_button('44:65:0d:66:87:c4', null, null, 'both'); //address from step above
+var dash = dash_button('44:65:0d:66:87:c4', null, null, 'all'); //address from step above
 
-var numbers = [
-	'+447479041444',
-	'+447748988224'
-];
+var numbers = process.env.NUMBERS.split(',');
 
 function notify(number) {
 	client.messages.create({
@@ -19,8 +16,11 @@ function notify(number) {
 }
 
 dash.on('detected', function (){
+	console.log('Button pressed');
 	for (var i = 0, l = numbers.length; i < l; i++) {
-		console.log('Button pressed');
+		console.log(numbers[i]);
 		notify(numbers[i]);
 	}
 });
+
+console.log('running');
