@@ -1,4 +1,4 @@
-var client = require('twilio')(process.env.TWILIOID, process.env.TWILIOSECRET);
+var client = require('twilio');
 var dash_button = require('node-dash-button');
 
 var dash = dash_button('44:65:0d:66:87:c4', null, null, 'both'); //address from step above
