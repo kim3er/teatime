@@ -9,7 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cap": "^0.1.1",
     "node-dash-button": "kim3er/node-dash-button#feature/udp",
     "twilio": "^2.10.0"
   }
