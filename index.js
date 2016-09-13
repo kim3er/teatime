@@ -9,7 +9,7 @@ function notify(number) {
 	client.messages.create({
 		body: 'Tea is ready',
 		to: number,
-		from: '+441484906118'
+		from: process.env.FROMNUMBER
 	}, function() {
 		//console.log(arguments);
 	});
@@ -24,3 +24,9 @@ dash.on('detected', function (){
 });
 
 console.log('running');
+
+client.messages.create({
+	body: 'Application running',
+	to: numbers[1],
+	from: '+441484906118'
+});
