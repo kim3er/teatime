@@ -12,7 +12,7 @@ var dash_button = require('node-dash-button');
 var dash = dash_button('44:65:0d:66:87:c4', null, null, 'all'); //address from step above
 
 function log(message) {
-	fs.appendFileSync(logPath + 'log.txt', '[' + Date() + '] ' + message);
+	fs.appendFileSync(logPath + 'log.txt', '[' + Date() + '] ' + message + '\n');
 }
 
 function notify(number) {
