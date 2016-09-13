@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "./node_modules/.bin/nodemon index"
+    "start": "./node_modules/.bin/forever -c ./node_modules/.bin/nodemon --exitcrash index.js"
   },
   "author": "",
   "license": "ISC",
@@ -14,6 +14,7 @@
     "twilio": "^2.10.0"
   },
   "devDependencies": {
+    "forever": "^0.15.2",
     "nodemon": "^1.10.2"
   }
 }
