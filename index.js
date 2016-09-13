@@ -1,7 +1,8 @@
 var accountSid = process.argv[2],
 	authToken = process.argv[3],
 	numbers = process.argv[4].split(','),
-	fromNumber = process.argv[5];
+	fromNumber = process.argv[5],
+	logPath = process.argv[6];
 
 var fs = require('fs');
 
@@ -11,7 +12,7 @@ var dash_button = require('node-dash-button');
 var dash = dash_button('44:65:0d:66:87:c4', null, null, 'all'); //address from step above
 
 function log(message) {
-	fs.appendFileSync('log.txt', '[' + Date() + '] ' + message);
+	fs.appendFileSync(logPath + 'log.txt', '[' + Date() + '] ' + message);
 }
 
 function notify(number) {
