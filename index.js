@@ -34,3 +34,7 @@ dash.on('detected', function (){
 });
 
 log('Script running.');
+
+setInterval(function () {
+  log('Still alive.');
+}, 1000 * 60 * 60);
