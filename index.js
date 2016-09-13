@@ -27,9 +27,3 @@ dash.on('detected', function (){
 });
 
 console.log('running');
-
-client.messages.create({
-	body: 'Application running',
-	to: numbers[1],
-	from: fromNumber
-});
